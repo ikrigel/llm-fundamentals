@@ -31,6 +31,7 @@ header {
 header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 header p {
@@ -206,12 +207,36 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     header h1 {
         font-size: 1.8em;
+        text-align: center;
+    }
+
+    header {
+        padding: 30px 20px;
     }
 
     main {
         padding: 30px 20px;
+    }
+
+    .container {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    main {
+        padding: 20px 15px;
     }
 }
