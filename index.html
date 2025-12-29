@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Sentiment Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Review Sentiment Analyzer</h1>
+            <p>Analyze reviews using Google Gemini AI</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="api-key">Gemini API Key:</label>
+                <input
+                    type="password"
+                    id="api-key"
+                    placeholder="Enter your Gemini API key"
+                    autocomplete="off"
+                >
+                <small>Get your free API key from <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a></small>
+            </div>
+
+            <div class="input-section">
+                <label for="review-text">Review Text:</label>
+                <textarea
+                    id="review-text"
+                    rows="5"
+                    placeholder="Enter a review to analyze..."
+                >Yeah, this was the *best* book ever, only made me want to pull my eyes out of their sockets</textarea>
+            </div>
+
+            <button id="analyze-btn" class="analyze-btn">Analyze Review</button>
+
+            <div id="result" class="result hidden">
+                <h3>Analysis Result:</h3>
+                <div id="llm-response" class="llm-response"></div>
+                <div id="sentiment" class="sentiment"></div>
+                <div id="token-info" class="token-info"></div>
+            </div>
+
+            <div id="error" class="error hidden"></div>
+            <div id="loading" class="loading hidden">Analyzing...</div>
+        </main>
+
+        <footer>
+            <p>Built with Google Gemini API | <a href="https://github.com/ikrigel/llm-fundamentals" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

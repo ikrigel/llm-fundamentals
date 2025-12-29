@@ -1,6 +1,12 @@
 # LLM Fundamentals
 
-## Proejct Setup Instructions
+A learning project to understand how to communicate with Large Language Models through APIs using Google Gemini.
+
+## 🌐 Live Demo
+
+Try the web app: **[https://ikrigel.github.io/llm-fundamentals/](https://ikrigel.github.io/llm-fundamentals/)**
+
+## Project Setup Instructions
 
 1. Clone the repo
 2. Install dependencies with `npm install`
@@ -27,6 +33,19 @@ config: {
 }
 ```
 
+## 🎯 Features
+
+### Web App (GUI)
+- Interactive sentiment analysis tool
+- Real-time review analysis using Gemini AI
+- Token usage tracking
+- Responsive design
+- API key stored locally in browser
+
+### Node.js Script (CLI)
+- Command-line sentiment analysis
+- Demonstrates basic API integration
+
 ## Tasks
 
 ### 1. Simple LLM Request via API
@@ -38,3 +57,4 @@ config: {
 ### 2. Token tracking
 
 - Add a log showing the input & output tokens used
+- ✅ Implemented in the web app!
