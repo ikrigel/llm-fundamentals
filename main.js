@@ -2,14 +2,19 @@ import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv"; // to read the .env file
 
 dotenv.config();
-const gemini = new GoogleGenAI({}); // initializes the Gemini client and automatically loads the API key from the .env file
+const gemini = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY }); // initializes the Gemini client with the API key from the .env file
 
 const askGemini = async (userPrompt) => {
-  // TODO: implement
+  const result = await gemini.models.generateContent({
+    model: "gemini-2.5-flash",
+    contents: userPrompt
+  });
+  return result.text;
 };
 
 const isPositiveReview = (llmResult) => {
-  // TODO: implement
+  // Check if the LLM response contains "positive" (case-insensitive)
+  return llmResult.toLowerCase().includes("positive");
 };
 
 const run = async () => {
